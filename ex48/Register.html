@@ -1,0 +1,118 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Ex48 - Tran Hac Huong Thu</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      width: 650px;
+      margin: auto;
+      background-color: #add8e6;
+      padding: 20px;
+      border: 2px solid #00008b;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+    label {
+      display: inline-block;
+      width: 100px;
+      margin-top: 8px;
+    }
+    input[type="text"], select, textarea {
+      padding: 5px;
+      margin: 5px 0;
+    }
+    textarea {
+      width: 400px;
+      height: 100px;
+    }
+    .form-row {
+      margin-bottom: 10px;
+    }
+    .buttons {
+      text-align: center;
+      margin-top: 15px;
+    }
+    input[type="submit"], input[type="reset"] {
+      padding: 8px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #333;
+      cursor: pointer;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+   <p align="center"> <img src="../ex48/images/Jackson.gif"/></p>
+    <h2>Registration Form</h2>
+    <p align="center">Register your Jackson Electronics product here</p>
+
+  
+    <form action="https://tranduythanh.com/" method="POST">
+      <div class="form-row">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="firstname" required>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lastname" required>
+      </div>
+
+      <div class="form-row">
+        <label>Address #1:</label>
+        <input type="text" name="address1" size="40">
+      </div>
+
+      <div class="form-row">
+        <label>Address #2:</label>
+        <input type="text" name="address2" size="40">
+      </div>
+
+      <div class="form-row">
+        <label>City:</label>
+        <input type="text" name="city">
+        <label>State:</label>
+        <input type="text" name="state" size="5">
+        <label >Zip:</label>
+        <input type="text" name="zip" size="8">
+      </div>
+
+      <div class="form-row">
+        <label>Country:</label>
+        <select name="country">
+          <option>United States</option>
+          <option>Canada</option>
+          <option>UK</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <hr>
+
+      <div class="form-row">
+        <label>Product:</label>
+        <select name="product">
+          <option>ScanMaster</option>
+          <option>PhotoPro</option>
+          <option>VideoMax</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Date Purchased:</label>
+        <input type="text" name="date">
+      </div>
+
+      <div class="form-row">
+        <label>Serial #:</label>
+        <input type="text" name="serial">
+      </div>
+
+      <div class="form-row">
+        <label>Used for:</label>
+        <input type="radio" name="used" value="Home"> Home
+        <input type="radio" name="used" value="Business"> Business
