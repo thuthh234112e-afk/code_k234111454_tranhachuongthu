@@ -1,24 +1,33 @@
 <html>
 <head>
-    <title>Online Classifieds Search Form</title>
+    <title>Online Classifieds Search Form - Tran Hac Huong Thu</title>
     <style>
         body {
-            background-color: #ccffff;
+            background-color: #ffffff; 
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center; 
+            align-items: center;    
+            height: 100vh;         
+            margin: 0;
+        }
+        form {
+            padding: 20px;
+            background: #ccffff;          
+            border: 2px solid #000099;  
+            width: 600px;                
+            box-sizing: border-box;
         }
         h2 {
             color: red;
-        }
-        form {
-            padding: 10px;
-            background: #ccffff;
+            margin-top: 0;
         }
         .section {
             margin-bottom: 15px;
         }
         .radio-group {
             display: grid;
-            grid-template-columns: 150px 150px; /* canh 2 cột đều nhau */
+            grid-template-columns: 150px 150px;
             row-gap: 5px;
         }
         .checkbox-group {
@@ -27,22 +36,20 @@
             row-gap: 5px;
         }
         input[type="text"] {
-            margin-top: 10px;   /* tạo khoảng cách sau mục 4 */
+            margin-top: 10px;
             padding: 5px;
         }
 
-        /* Tuỳ biến checkbox và radio để có màu xanh khi chọn */
         input[type="checkbox"], input[type="radio"] {
-            accent-color: green;   /* CSS hiện đại: đổi màu tick */
+            accent-color: green;
             width: 16px;
             height: 16px;
         }
-
         .buttons {
             margin-top: 15px;
         }
         .buttons img {
-            width: 45px;   /* phóng to icon */
+            width: 45px;
             height: 45px;
             vertical-align: middle;
             margin-right: 5px;
@@ -51,12 +58,18 @@
             margin-right: 25px;
             font-weight: bold;
         }
+        hr {
+            border: none;
+            border-top: 1px solid #666;
+            margin: 10px 0 20px 0;
+        }
     </style>
 </head>
 <body>
-    <h2>Online Classifieds Search Form</h2>
-    <hr/>
     <form>
+        <h2>Online Classifieds Search Form</h2>
+        <hr/>
+
         <div class="section">
             <b>1) Search for a classified in the following sections:</b><br/><br/>
             <div class="radio-group">
@@ -90,7 +103,7 @@
         <div class="section">
             <b>4) Enter a few keywords to describe the classified.</b>
             <br/><br/>
-            <input type="text" style="width: 90%;"/>
+            <input type="text" style="width: 95%;"/>
         </div>
 
         <div class="section">
