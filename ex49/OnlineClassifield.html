@@ -1,0 +1,106 @@
+<html>
+<head>
+    <title>Online Classifieds Search Form</title>
+    <style>
+        body {
+            background-color: #ccffff;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            color: red;
+        }
+        form {
+            padding: 10px;
+            background: #ccffff;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .radio-group {
+            display: grid;
+            grid-template-columns: 150px 150px; /* canh 2 cột đều nhau */
+            row-gap: 5px;
+        }
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            row-gap: 5px;
+        }
+        input[type="text"] {
+            margin-top: 10px;   /* tạo khoảng cách sau mục 4 */
+            padding: 5px;
+        }
+
+        /* Tuỳ biến checkbox và radio để có màu xanh khi chọn */
+        input[type="checkbox"], input[type="radio"] {
+            accent-color: green;   /* CSS hiện đại: đổi màu tick */
+            width: 16px;
+            height: 16px;
+        }
+
+        .buttons {
+            margin-top: 15px;
+        }
+        .buttons img {
+            width: 45px;   /* phóng to icon */
+            height: 45px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        .btn-label {
+            margin-right: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Online Classifieds Search Form</h2>
+    <hr/>
+    <form>
+        <div class="section">
+            <b>1) Search for a classified in the following sections:</b><br/><br/>
+            <div class="radio-group">
+                <label><input type="radio" name="section"> Employment</label>
+                <label><input type="radio" name="section"> Personal</label>
+                <label><input type="radio" name="section"> For Sale</label>
+                <label><input type="radio" name="section"> Miscellaneous</label>
+                <label><input type="radio" name="section"> Housing</label>
+                <label><input type="radio" name="section"> All of the above</label>
+            </div>
+        </div>
+
+        <div class="section">
+            <b>2) Search the following publications:</b><br/><br/>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Midwest times</label>
+                <label><input type="checkbox"> Modern News</label>
+                <label><input type="checkbox"> Employment Today</label>
+                <label><input type="checkbox"> Great Lakes Classifieds</label>
+                <label><input type="checkbox"> Middleton Daily</label>
+                <label><input type="checkbox"> Cashtown Daily News</label>
+            </div>
+        </div>
+
+        <div class="section">
+            <b>3) From to:</b>
+            <input type="text" placeholder="mm/dd/yy"/> to 
+            <input type="text" placeholder="mm/dd/yy"/>
+        </div>
+
+        <div class="section">
+            <b>4) Enter a few keywords to describe the classified.</b>
+            <br/><br/>
+            <input type="text" style="width: 90%;"/>
+        </div>
+
+        <div class="section">
+            <b>5) Click one of the options below:</b><br/>
+            <div class="buttons">
+                <span class="btn-label"><img src="../ex49/images/Search.gif"/> </span>
+                <span class="btn-label"><img src="../ex49/images/Help.gif"/> </span>
+                <span class="btn-label"><img src="../ex49/images/Cancel.gif"/> </span>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
