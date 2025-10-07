@@ -1,0 +1,217 @@
+<html>
+<head>
+    <title> DeLong Enterprises - Trần Hạc Hương Thư</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            margin: 0;
+        }
+        form {
+            background-color: #ccffff;
+            border: 2px solid #000099;
+            width: 700px;
+            padding: 20px 30px;
+            box-sizing: border-box;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .header img {
+            width: 100%;
+            height: 70px;
+            object-fit: cover;
+            border: none;
+        }
+        h2 {
+            color: black;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #000;
+            margin: 5px 0 20px 0;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], select, textarea {
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #999;
+        }
+        input[type="text"] {
+            width: 200px;
+        }
+        textarea {
+            width: 95%;
+            height: 60px;
+        }
+        .inline {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #666;
+            padding: 5px;
+            text-align: left;
+        }
+        th {
+            background-color: #99cccc;
+        }
+        input[type="number"], input[type="date"], input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[type="radio"] {
+            accent-color: black;
+        }
+        .buttons {
+            margin-top: 15px;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #e6e6e6;
+            border: 1px solid #000;
+            padding: 6px 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .footer {
+            font-size: 12px;
+            margin-top: 15px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="header">
+            <img src="../ex50/images/DeLong.jpg" alt="DeLong Enterprises"/>
+        </div>
+
+        <h2>Travel Expense Report</h2>
+        <hr/>
+
+        <div class="section inline">
+            <label>1) First Name:</label>
+            <input type="text" name="firstname"/>
+            <label>Last Name:</label>
+            <input type="text" name="lastname"/>
+        </div>
+
+        <div class="section">
+            <label>2) Social Security Number:</label><br/>
+            <input type="text" name="ssn"/>
+        </div>
+
+        <div class="section">
+            <label>3) Department:</label>
+            <select name="department">
+                <option>Accounting</option>
+                <option>Marketing</option>
+                <option>Sales</option>
+                <option>HR</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <label>4) Describe the purpose of your trip:</label><br/>
+            <textarea name="purpose"></textarea>
+        </div>
+
+        <div class="section">
+            <label>5) Itemize your travel expenses:</label>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yy"></td>
+                    <td><input type="text"></td>
+                    <td>
+                        <select>
+                            <option>Meal</option>
+                            <option>Hotel</option>
+                            <option>Transportation</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                    <td><input type="number" step="0.01"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yy"></td>
+                    <td><input type="text"></td>
+                    <td>
+                        <select>
+                            <option>Meal</option>
+                            <option>Hotel</option>
+                            <option>Transportation</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                    <td><input type="number" step="0.01"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yy"></td>
+                    <td><input type="text"></td>
+                    <td>
+                        <select>
+                            <option>Meal</option>
+                            <option>Hotel</option>
+                            <option>Transportation</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                    <td><input type="number" step="0.01"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yy"></td>
+                    <td><input type="text"></td>
+                    <td>
+                        <select>
+                            <option>Meal</option>
+                            <option>Hotel</option>
+                            <option>Transportation</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                    <td><input type="number" step="0.01"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section inline">
+            <label>6) Have you submitted your receipts?</label>
+            <label><input type="radio" name="receipts"> Yes</label>
+            <label><input type="radio" name="receipts"> No</label>
+        </div>
+
+        <div class="buttons">
+            <input type="submit" value="Submit travel expenses"/>
+            <input type="reset" value="Reset"/>
+        </div>
+
+        <div class="footer">
+            <p>Questions? Contact Debbie Larson in Accounting (ext. 2150).</p>
+        </div>
+    </form>
+</body>
+</html>
