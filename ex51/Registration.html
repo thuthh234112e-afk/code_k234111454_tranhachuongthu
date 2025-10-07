@@ -1,0 +1,177 @@
+<html>
+<head>
+    <title>Newborn Registration - Trần Hạc Hương Thư</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0;
+            padding: 50px;
+        }
+
+        form {
+            background-color: #006666; 
+            border: 2px solid #000099;
+            width: 520px;
+            padding: 25px 35px;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .header h1 {
+            color: #ffcc00;
+            font-family: "Times New Roman", serif;
+            font-size: 22px;
+            margin: 0;
+            border-bottom: 2px solid #ffcc00;
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        .header h2 {
+            color: orange;
+            font-size: 13px;
+            margin: 0;
+            font-family: "Times New Roman", serif;
+        }
+
+        h3 {
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        label {
+            color: white;
+            font-weight: normal;
+            font-size: 14px;
+        }
+
+        input[type="text"], select {
+            padding: 4px;
+            margin-top: 3px;
+            border: 1px solid #444;
+            background-color: white;
+            color: black;
+        }
+
+        input[type="text"] {
+            width: 170px;
+        }
+
+        .section {
+            margin-bottom: 12px;
+        }
+
+        .inline {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        select[multiple] {
+            width: 200px;
+            height: 80px;
+            overflow-y: scroll;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background-color: #f2f2f2;
+            border: 1px solid black;
+            padding: 5px 15px;
+            font-weight: normal;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #d9d9d9;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="header">
+            <img src="../ex51/images/Logo.gif" alt="DeLong Enterprises"/>
+        </div>
+
+        <h3>Newborn Registration</h3>
+
+        <div class="section">
+            <label>Date </label>
+            <input type="text" placeholder="mm/dd/yy"/>
+        </div>
+
+        <div class="section inline">
+            <label>1) Infant's first name:</label>
+            <input type="text"/>
+            <label>Last:</label>
+            <input type="text"/>
+        </div>
+
+        <div class="section">
+            <label>2) Medical Record #:</label>
+            <input type="text"/>
+        </div>
+
+        <div class="section">
+            <label>3) Date of birth:</label>
+            <input type="text" placeholder="mm/dd/yy"/>
+        </div>
+
+        <div class="section">
+            <label>4) Birth weight:</label>
+            <input type="text"/>
+        </div>
+
+        <div class="section">
+            <label>5) APGAR score:</label>
+            <input type="text"/>
+        </div>
+
+        <div class="section inline">
+            <label>6) Mother's first name:</label>
+            <input type="text"/>
+            <label>Last:</label>
+            <input type="text"/>
+        </div>
+
+        <div class="section inline">
+            <label>7) Father's first name:</label>
+            <input type="text"/>
+            <label>Last:</label>
+            <input type="text"/>
+        </div>
+
+        <div class="section inline">
+            <label>8) Physician (check all that apply):</label>
+            <select multiple>
+                <option>Dr. Warren Albert</option>
+                <option>Dr. Maria Alvarez</option>
+                <option>Dr. Karen Brinkman</option>
+                <option>Dr. Micheal Kerry</option>
+            </select>
+        </div>
+
+        <div class="buttons">
+            <input type="submit" value="Register"/>
+            <input type="reset" value="Cancel"/>
+        </div>
+    </form>
+</body>
+</html>
