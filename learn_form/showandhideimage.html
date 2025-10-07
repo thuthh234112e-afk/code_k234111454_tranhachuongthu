@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> Show and Hide Image - Trần Hạc Hương Thư</title>
+        <script>
+            function hide_image()
+            {
+                //step 1: get image element
+                img_yune=document.getElementById("yune1904")
+                //step 2: hide image (using style display -> none)
+                img_yune.style="display: none;"
+            }
+            function show_image()
+            {
+                //step 1: get image element
+                img_yune=document.getElementById("yune1904")
+                //step 2: hide image (using style display -> none)
+                img_yune.style="display: block;"
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myform">
+            <input type="radio" name="myimage" id="img1" onchange="show_image()"/>
+            <label for="img1">Show Image</label>
+            <br/>
+            <input type="radio" name="myimage" id="img2" onchange="hide_image()"/>
+            <label for="img2">Hide Image</label>
+            <br/>
+            <img src="../learn_form/img/DSC_9068.JPG" id="yune1904" name="yune1904" width="600" height="410"
+                style="display: block;"/>
+        </form>
+    </body>
+</html>
