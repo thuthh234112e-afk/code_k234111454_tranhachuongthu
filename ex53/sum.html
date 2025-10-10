@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sum Result - Thanh Thao</title>
+</head>
+<body>
+    <h3><b>Product Summary</b></h3>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        // Lấy dữ liệu
+        let qty1 = parseFloat(params.get("qty1")) || 0;
+        let qty2 = parseFloat(params.get("qty2")) || 0;
+        let qty3 = parseFloat(params.get("qty3")) || 0;
+
+        let price1 = parseFloat(params.get("price1")) || 0;
+        let price2 = parseFloat(params.get("price2")) || 0;
+        let price3 = parseFloat(params.get("price3")) || 0;
+
+        // Tính từng item và tổng
+        let item1 = qty1 * price1;
+        let item2 = qty2 * price2;
+        let item3 = qty3 * price3;
+        let total = item1 + item2 + item3;
+
+        document.write("<table border='1' cellpadding='5'>");
+        document.write("<tr><th>Part</th><th>Qty</th><th>Price</th><th>Item Total</th></tr>");
+        document.write(`<tr><td>C112</td><td>${qty1}</td><td>${price1.toFixed(2)}</td><td>${item1.toFixed(2)}</td></tr>`);
+        document.write(`<tr><td>B124</td><td>${qty2}</td><td>${price2.toFixed(2)}</td><td>${item2.toFixed(2)}</td></tr>`);
+        document.write(`<tr><td>U125</td><td>${qty3}</td><td>${price3.toFixed(2)}</td><td>${item3.toFixed(2)}</td></tr>`);
+        document.write(`<tr><td colspan='3' align='right'><b>Total:</b></td><td><b>${total.toFixed(2)}</b></td></tr>`);
+        document.write("</table>");
+    </script>
+</body>
+</html>
