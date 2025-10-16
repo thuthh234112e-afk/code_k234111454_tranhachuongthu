@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải Phương Trình Bậc Hai - Tran Hac Huong Thu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0; 
+        }
+
+        .solver-card {
+            width: 350px; 
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #e6ffe6; 
+            padding: 8px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+            font-size: 1rem;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .input-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .input-table td {
+            border: 1px solid #ddd;
+            padding: 4px 8px; 
+        }
+        
+        .input-table td:first-child {
+            width: 15%; 
+            font-weight: normal; 
+            text-align: right;
+            background-color: #fff;
+        }
+
+        .input-table input {
+            width: 100%;
+            border: none;
+            padding: 0;
+            margin: 0;
+            outline: none;
+            text-align: left;
+            background-color: transparent;
+        }
+
+        #result-cell {
+            color: #cc0000;
+            font-weight: bold;
+            background-color: #fff;
+            padding: 4px 8px; 
+        }
+
+        .button-cell-container {
+            padding: 0 !important; 
+        }
+        
+        .button-cell {
+            display: flex;
+            width: 100%;
+        }
+
+        .solver-button {
+            flex-grow: 1; 
+            padding: 8px 10px; 
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s, box-shadow 0.2s;
+            border: 0;
+            border-right: 1px solid #ddd; 
+        }
+        
+        #find-solution-btn {
+            background-color: #fff3e0; 
+            border: 1px solid #ffb300; 
+            border-right: none; 
+            color: #ffb300;
+            border-radius: 0;
+        }
+        
+        #clear-btn {
+            background-color: #f0f0f0;
+            color: #333;
+            border: 1px solid #ddd;
+            border-left: none; 
+            border-radius: 0;
+        }
+
+        .input-table tr:last-child td {
+            border-bottom: none;
+        }
+        .input-table tr:last-child td:first-child {
+            border-left: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="solver-card">
+    <div class="header">The quadratic equation ($ax^2 + bx + c = 0$)</div>
+    
+    <table class="input-table">
+        <tr>
+            <td>a:</td>
+            <td><input type="text" id="a" value="1"></td>
+        </tr>
+        <tr>
+            <td>b:</td>
+            <td><input type="text" id="b" value="3"></td>
+        </tr>
+        <tr>
+            <td>c:</td>
+            <td><input type="text" id="c" value="-4"></td>
+        </tr>
+        <tr>
+            <td>Result:</td>
+            <td id="result-cell">x1=-4 ; x2=1</td>
+        </tr>
+        <tr>
+            <td></td> 
+            <td class="button-cell-container">
+                <div class="button-cell">
+                    <button id="find-solution-btn" class="solver-button" onclick="findSolution()">Find solution</button>
+                    <button id="clear-btn" class="solver-button" onclick="clearInputs()">Clear</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script src="quadratic_solver.js"></script>
+</body>
+</html>
