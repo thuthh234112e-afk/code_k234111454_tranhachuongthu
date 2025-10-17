@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>
+			tran hac huong thu
+		</title>
+        <script type="text/javascript">
+            var txt="<bookstore><book>"; 
+            txt += "<title>Everyday Italian</title>"; 
+            txt += "<author>Giada De Laurentiis</author>"; 
+            txt += "<year>2005</year>"; 
+            txt += "</book></bookstore>"; 
+            alert(txt)
+        </script>
+	</head>
+	<body>
+		<table border="1">
+            <tr>
+                <td>Title:</td>
+                <td id="id_title"></td>
+            </tr>
+
+            <tr>
+                <td>Author</td>
+                <td id="td_author"></td>
+            </tr>
+
+            <tr>
+                <td>Year:</td>
+                <td id="td_year"></td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            var parse=new DOMParser
+
+            var xmlDoc=parse.parseFromString(txt,"text/xml")
+
+            title=xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+            author=xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue;
+            year=xmlDoc.getElementsByTagName("year")[0].childNodes[0].nodeValue;
+            td_title.innerText=title
+            td_author.innerText=author
+            td_year.innerText=year
+
+
+        </script>
+
+	</body>
+</html>
