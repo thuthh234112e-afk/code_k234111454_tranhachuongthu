@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Information - Trần Hạc Hương Thư</title>
+  <style>
+    body { font-family: Georgia, "Times New Roman", serif; padding: 24px; }
+    table { border-collapse: collapse; width: 560px; }
+    thead th {
+      background: #dfeedd;               
+      border: 1px solid #777;
+      padding: 8px;
+      font-size: 22px;
+      text-align: center;
+    }
+    tbody td {
+      border: 1px solid #777;
+      padding: 8px 10px;
+      font-size: 20px;
+    }
+    tbody td.label { width: 45%; }
+    tbody tr { background: #fff; color: #000; transition: background .1s ease; }
+    tbody tr.hovered { background: #1f6ad5; color: #fff; }
+  </style>
+</head>
+<body>
+  <table id="studentTable" aria-label="Student Information">
+    <thead>
+      <tr><th colspan="2">Student Information</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="label">Student ID:</td>   <td id="id"></td></tr>
+      <tr><td class="label">Student Name:</td> <td id="name"></td></tr>
+      <tr><td class="label">Birthday:</td>     <td id="birthday"></td></tr>
+      <tr><td class="label">Gender:</td>       <td id="gender"></td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    const xmlText = `
+      <student>
+        <id>987456</id>
+        <name>Marie Curie</name>
+        <birthday>7/11/1867</birthday>
+        <gender>Woman</gender>
+      </student>
+    `;
+
+    const xml = new DOMParser().parseFromString(xmlText, "application/xml");
+    const get = (tag) => xml.getElementsByTagName(tag)[0].textContent;
+
+    document.getElementById("id").textContent       = get("id");
+    document.getElementById("name").textContent     = get("name");
+    document.getElementById("birthday").textContent = get("birthday");
+    document.getElementById("gender").textContent   = get("gender");
+
+    document.querySelectorAll("#studentTable tbody tr").forEach(tr => {
+      tr.addEventListener("mouseenter", () => tr.classList.add("hovered"));
+      tr.addEventListener("mouseleave", () => tr.classList.remove("hovered"));
+    });
+  </script>
+</body>
+</html>
