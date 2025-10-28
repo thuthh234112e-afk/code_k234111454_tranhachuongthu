@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>
+			Trần Hạc Hương Thư
+		</title>
+	</head>
+    
+
+
+        
+	<body>
+        <table>
+            <tr>
+                <th>City</th>
+                <th>Buy</th>
+                <th>Sell</th>
+            </tr>
+            <tbody id="gold_tbody">
+                
+            </tbody>
+        </table>
+		
+    
+        <script type="text.javascript">
+            api_dantri="https://webapi.dantri.com.vn/misc"
+        </script>
+
+        <script type="text/javascript">
+            var xhr =new XMLHttpRequest();
+            xhr.open("GET",api_dantri,true);
+            xhr.send();
+            xhr.onreadystatechange=function()
+            {
+                if (xhr.readyState==4 && xhr.status==200)
+                {
+                    danTriJson=xhr.responseText
+                    danTriObject=JSON.parse(danTriJson)
+                    display
+                }
+                else
+                {
+                    //xu ly khi khong load duoc data
+                }
+            }
+        </script>
+
+        <script type="text/javascript">
+            function display_gold(danTriObject)
+            {
+                for(i=0;<danTriObject.golds.length;i++)
+            {
+                tr=document.createElement("tr")
+                td_city=document.createElement("td")
+                td_buy=document.createElement("td")
+                td_sell=document.createElement("td")
+                gold=danTriObject.golds[i]
+                td_city.innerText=gold.name
+                td_buy.innerText=gold.buy
+                td_sell.innerText=gold.sell
+                tr.appendChild(td_city)
+                tr.appendChild(td_buy)
+                tr.appendChild(td_sell)
+                gold_tbody.appendChild(tr)
+
+            }
+
+            }
+        </script>
+	</body>
+</html>
+
